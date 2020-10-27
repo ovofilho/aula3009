@@ -1,4 +1,7 @@
+import { FotoService } from './../service/foto.service';
 import { Component } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +10,11 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(public fotoService: FotoService) {}
+
+  tirarFoto(){
+    // alert('cliquei');
+    this.fotoService.adcionarFoto();
+  }
 
 }
